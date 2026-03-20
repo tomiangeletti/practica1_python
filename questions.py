@@ -1,22 +1,25 @@
 import random
 import string
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
-word = random.choice(words)
+categories = {
+    "programacion": ["python", "programa", "variable", "funcion", "bucle"],
+    "datos": ["cadena", "entero", "lista"]
+}
 guessed = []
 attempts = 6
 score = 0
 valid_chars = string.ascii_letters
 print("¡Bienvenido al Ahorcado!")
 print()
+# Mostrar categorias
+print("Categorias: ")
+for category in categories:
+        print("-", category)
+category_choiced = input("Elegi una categoria (escribir nombre de la categoria):")
+# Validar que la categoria sea correcta
+while category_choiced not in categories:
+        category_choiced = input("Categoria invalida. Por favor elija de nuevo: ")
+word = random.choice(categories[category_choiced])
+# Bucle principal
 while attempts > 0:
 # Mostrar progreso: letras adivinadas y guiones para las que faltan
     progress = ""
