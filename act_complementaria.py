@@ -60,7 +60,20 @@ while True:
                 print("Resultado almacenado exitosamente.")
                 print()
         if choice == 3:
-              print(table)
+              # Ordenar la tabla de posiciones
+              sorted_table = sorted(table.items(), key=lambda x: x[1], reverse=True)
+              print("Tabla de posiciones")
+              print("-----------------------------------------")
+              for team, points in sorted_table:
+                    print(f"{team:<20}  | {points:>}pts")
+              print("-----------------------------------------")
+        if choice == 4:
+                choice = input("Escriba el equipo a eliminar: ")
+                while choice not in table:
+                    print()
+                    choice = input("Equipo inexistente. Intentelo de nuevo: ")
+                del table[choice]
+                print(f"El equipo {choice} ha sido eliminado con exito.")
         if choice == 5:
               print("Hasta pronto!")
               break
