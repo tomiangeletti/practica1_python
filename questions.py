@@ -6,12 +6,9 @@ categories = {
     "datos": ["cadena", "entero", "lista"]
 }
 
-
 score = 0
 valid_chars = string.ascii_letters
-continue_playing = True
 index = 0
-
      
 print("¡Bienvenido al Ahorcado!")
 print()
@@ -63,7 +60,8 @@ while index < len(words_category_choiced):
                 attempts = 6
                 word = words_random_order[index]
             elif choice == "n":
-                #continue_playing = False
+                print()
+                print("Bien jugado! Hasta la proxima.")
                 break
         else:
             print(f"Intentos restantes: {attempts}")
@@ -90,5 +88,6 @@ while index < len(words_category_choiced):
     if choice == "s":
         index += 1
     elif choice == "n":
-        #continue_playing = False
+        print()
+        print("Bien jugado! Hasta la proxima.")
         break
