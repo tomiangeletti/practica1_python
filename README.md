@@ -33,6 +33,8 @@ Luego de descargar Python, copiar y ejecutar este comando en la consola.
 
 ## ▶️ Cómo ejecutar el programa
 
+Los archvios de la practica 2 estan dentro del directorio src/notebooks
+
 1. Descargar el archivo del programa que quieras ejecutar (o clonar el repositorio directamente).
 
 2. Abrir el archivo descargado en Visual Studio Code (u otro IDE, preferentemente VSC)
@@ -48,3 +50,4 @@ Luego de descargar Python, copiar y ejecutar este comando en la consola.
 - Hacer clic en "Run All" o ejecutar las celdas una por una
 
 El programa se ejecutará directamente dentro de Visual Studio Code.
+
